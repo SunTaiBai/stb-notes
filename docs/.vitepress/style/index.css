@@ -1,0 +1,19 @@
+:root {
+    --stb-main-color: rgb(220 184 173);
+    --stb-main-next-color:  rgb(137 80 69);
+}
+
+:root {
+    /* 标题 */
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: linear-gradient(50deg, var(--stb-main-color), var(--stb-main-next-color));
+
+    /* 图标背景 */
+    --vp-home-hero-image-background-image: linear-gradient(-40deg, var(--stb-main-color), var(--stb-main-next-color));
+    --vp-home-hero-image-filter: blur(150px);
+
+    /* 按钮 背景色 */
+    --vp-button-brand-bg: var(--stb-main-next-color);
+    --vp-button-brand-border: var(--stb-main-color);
+
+}
