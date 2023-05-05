@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import { head, nav, sidebar, algolia } from './configs'
 const isProd = process.env.NODE_ENV === 'production'
 export default defineConfig({
+    outDir: '../dist',
     base: '/',
     title: '猩猩点灯',
     description: '',
