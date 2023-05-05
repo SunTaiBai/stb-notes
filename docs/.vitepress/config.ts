@@ -22,7 +22,6 @@ export default defineConfig({
             level: 'deep',
             label: '本页目录'
         },
-        /* Algolia DocSearch 配置 */
         algolia,
         socialLinks: [{ icon: 'github', link: 'https://github.com/SunTaiBai' }],
         footer: {

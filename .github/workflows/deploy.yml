@@ -1,4 +1,4 @@
-name: algolia
+name: Deploy
 on:
   push:
     branches:
