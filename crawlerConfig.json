@@ -1,7 +1,7 @@
 {
   "index_name": "SunTaiBai_DOC",
   "start_urls": [
-    "https://notes.sunguojia.com"
+    "https://notes.sunguojia.com/**"
   ],
   "rateLimit": 8,
   "maxDepth": 10,
