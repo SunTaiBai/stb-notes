@@ -1,15 +1,11 @@
 {
     "index_name": "SunTaiBai_DOC",
     "start_urls": [
-        "https://notes.sunguojia.com"
+        "https://notes.sunguojia.com/**"
     ],
     "rateLimit": 8,
     "maxDepth": 10,
     "selectors": {
-        "lvl0": {
-            "selector": "",
-            "defaultValue": "Documentation"
-        },
         "lvl1": ".content h1",
         "lvl2": ".content h2",
         "lvl3": ".content h3",
