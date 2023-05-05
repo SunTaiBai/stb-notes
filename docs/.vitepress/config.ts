@@ -1,23 +1,32 @@
 import { defineConfig } from 'vitepress'
+import { head, nav, sidebar, algolia } from './configs'
+const isProd = process.env.NODE_ENV === 'production'
 export default defineConfig({
     base: '/',
-    outDir: '../dist',
     title: '猩猩点灯',
     description: '',
     lang: 'cn-ZH',
     lastUpdated: true,
+    cleanUrls: true,
     /* markdown 配置 */
     markdown: {
         lineNumbers: true
     },
-    head: [
-        ['link', { rel: 'icon', href: '/logo.svg' }]
-    ],
+    head,
     themeConfig: {
         logo: '/logo.svg',
-        nav: [
-            { text: "快捷导航", link: "/pages/nav/" },
-        ],
+        nav,
+        sidebar,
+        outline: {
+            level: 'deep',
+            label: '本页目录'
+        },
+        /* Algolia DocSearch 配置 */
+        algolia,
         socialLinks: [{ icon: 'github', link: 'https://github.com/SunTaiBai' }],
+        footer: {
+            message: '如有转载或 CV 的请标注本站原文地址',
+            copyright: 'Copyright © 2023-SunTaiBai'
+        },
     },
 })

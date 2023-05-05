@@ -1,0 +1,41 @@
+/**
+ * Colors
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-c-brand: rgb(137 80 69);
+    --vp-c-brand-light: rgb(141, 94, 84);
+    --vp-c-brand-lighter: rgb(142, 109, 102);
+    --vp-c-brand-lightest: rgb(142, 119, 114);
+    --vp-c-brand-dark: rgb(121, 69, 59);
+    --vp-c-brand-darker: rgb(136, 82, 71);
+    --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
+}
+
+/**
+   * Component: Button
+   * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-button-brand-border: var(--vp-c-brand-light);
+    --vp-button-brand-text: var(--vp-c-white);
+    --vp-button-brand-bg: var(--vp-c-brand);
+    --vp-button-brand-hover-border: var(--vp-c-brand-light);
+    --vp-button-brand-hover-text: var(--vp-c-white);
+    --vp-button-brand-hover-bg: var(--vp-c-brand-light);
+    --vp-button-brand-active-border: var(--vp-c-brand-light);
+    --vp-button-brand-active-text: var(--vp-c-white);
+    --vp-button-brand-active-bg: var(--vp-button-brand-bg);
+}
+
+
+
+:root {
+    /* 标题 */
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: linear-gradient(50deg, var(--vp-c-brand-lightest), var(--vp-c-brand-dark));
+
+    /* 图标背景 */
+    --vp-home-hero-image-background-image: linear-gradient(-40deg, var(--vp-c-brand-lightest), var(--vp-c-brand-dark));
+    --vp-home-hero-image-filter: blur(150px);
+}

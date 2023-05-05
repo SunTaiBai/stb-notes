@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "vitepress dev docs",
+    "docs:dev": "cross-env NODE_ENV=development vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs"
   },
@@ -17,19 +17,24 @@
   "devDependencies": {
     "@babel/core": "^7.21.8",
     "@babel/eslint-parser": "^7.21.8",
+    "@types/md5": "^2.3.2",
+    "@types/node": "^18.16.3",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
     "@typescript-eslint/parser": "^5.59.2",
+    "cross-env": "^7.0.3",
     "eslint": "^8.39.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.11.0",
+    "gitalk": "^1.8.0",
     "prettier": "^2.8.8",
     "vite": "^4.3.2",
     "vite-plugin-eslint": "^1.8.1",
     "vitepress": "1.0.0-alpha.75"
   },
   "dependencies": {
-    "vue": "^3.2.47",
-    "sass": "^1.62.1"
+    "md5": "^2.3.0",
+    "sass": "^1.62.1",
+    "vue": "^3.2.47"
   }
 }

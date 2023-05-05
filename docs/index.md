@@ -10,27 +10,16 @@ hero:
     src: /logo.svg
     alt: 猩猩点灯
   actions:
-    - text: 前端物语
-      link: /fe/es6/
+    - text: 开始
+      link: /pages/blog/
     - text: 快捷导航
       link: /pages/nav/
       theme: alt
 ---
 
 <style>
-/*爱的魔力转圈圈*/
 .stb-home-layout .image-src:hover {
-  transform: translate(-50%, -50%) rotate(666turn);
-  transition: transform 59s 1s cubic-bezier(0.3, 0, 0.8, 1);
-}
-
-.stb-home-layout .details small {
-  opacity: 0.8;
-}
-
-.stb-home-layout .item:last-child .details {
-  display: flex;
-  justify-content: flex-end;
-  align-items: end;
+  transform: translate(-50%, -50%) scale(1.5);
+  transition: transform .5s;
 }
 </style>
