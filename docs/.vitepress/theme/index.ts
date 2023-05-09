@@ -3,6 +3,7 @@ import { useData } from 'vitepress'
 import './style/index.scss'
 import { h, App } from 'vue'
 import GitTalk from './components/git-talk.vue'
+import NavBox from './components/Nav/index.vue'
 export default {
     extends: DefaultTheme,
     Layout: () => {
@@ -17,5 +18,6 @@ export default {
     },
     enhanceApp({ app }: { app: App }) {
         app.component("git-talk", GitTalk)
+        app.component("NavBox", NavBox)
     }
 }

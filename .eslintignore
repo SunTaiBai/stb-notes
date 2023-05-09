@@ -1,7 +1,0 @@
-*.sh
-node_modules
-*.md
-.vscode
-.husky
-.local
-dist

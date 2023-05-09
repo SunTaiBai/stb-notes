@@ -1,10 +1,12 @@
-### 123
-哈哈哈哈哈哈哈asdauhsdsfhoadsajdoasjaoijiajofia
+---
+layoutClass: nav-layout
+---
 
-## asdasd
 
-asdasdaodpajopsfjeiofjewofjeiofjweo斯恶附件hi围殴后哦违法hi武汉而非会危害覅和和福克斯的吧v疯狂接吻是的绿化那就肯定是v包括老师的超女可简单出风口
+<script setup>
+import { NAV_DATA } from './data'
+</script>
+<style src="./index.scss"></style>
+# 快捷导航
 
-```js
-console.log(123)
-```
+<NavBox v-for="(data, index) in NAV_DATA" :items="data.items" :title="data.title"/>

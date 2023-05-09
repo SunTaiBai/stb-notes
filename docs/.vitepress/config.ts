@@ -7,7 +7,7 @@ export default defineConfig({
     title: '猩猩点灯',
     description: '',
     lang: 'cn-ZH',
-    lastUpdated: true,
+    lastUpdated: false,
     cleanUrls: true,
     /* markdown 配置 */
     markdown: {
