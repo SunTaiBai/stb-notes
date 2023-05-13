@@ -7,7 +7,7 @@ export default defineConfig({
     title: '猩猩点灯',
     description: '',
     lang: 'cn-ZH',
-    lastUpdated: false,
+    lastUpdated: true,
     cleanUrls: true,
     /* markdown 配置 */
     markdown: {
@@ -15,6 +15,7 @@ export default defineConfig({
     },
     head,
     themeConfig: {
+        i18nRouting: false,
         logo: '/logo.svg',
         nav,
         sidebar,
@@ -28,5 +29,12 @@ export default defineConfig({
             message: '如有转载或 CV 的请标注本站原文地址',
             copyright: 'Copyright © 2023-SunTaiBai'
         },
+        darkModeSwitchLabel: '外观',
+        returnToTopLabel: '返回顶部',
+        lastUpdatedText: '上次更新',
+        docFooter: {
+            prev: '上一篇',
+            next: '下一篇'
+        }
     },
 })

@@ -17,7 +17,7 @@ const badgeComputed = computed(() => {
 </script>
 
 <template>
-  <a class="nav-link" :href="data.link">
+  <a class="nav-link" :href="data.link" target="_blank">
     <article class="nav-box">
       <div class="nav-box-header">
         <div class="icon">
