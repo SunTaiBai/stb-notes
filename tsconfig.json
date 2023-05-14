@@ -1,14 +1,29 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
-    "target": "esnext",
     "module": "esnext",
+    "target": "esnext",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "allowJs": true,
     "strict": true,
-    "jsx": "preserve"
+    "skipLibCheck": true,
+    "noUnusedLocals": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "lib": ["ESNext", "DOM"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["docs/.vitepress/*"],
+    }
   },
-  "include": ["env.d.ts", "**/.vitepress/**/*"]
+  "include": [
+    "docs",
+    "docs/.vitepress/theme/*.ts",
+    "docs/.vitepress/theme/components/*.vue",
+    "docs/.vitepress/*.ts",
+    "docs/vite.config.ts",
+    "types/**/*.d.ts",
+    "types/**/*.ts",
+  ],
+  "exclude": ["**/node_modules/**", "**/dist/**"]
 }

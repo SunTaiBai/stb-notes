@@ -1,19 +1,18 @@
 <script setup lang="ts">
-import { withBase } from "vitepress";
-import { NavItem } from "../../types";
-import { computed } from "vue";
-import { slugify } from "@mdit-vue/shared";
+import { withBase } from 'vitepress'
+import { computed } from 'vue'
+import type { NavItem } from '../../types'
+
 const props = defineProps<{
-  data: NavItem;
-}>();
+  data: NavItem
+}>()
 
 const badgeComputed = computed(() => {
-  if (typeof props.data.badge === "string") {
-    return { text: props.data.badge, type: "info" };
-  }
-  return props.data.badge;
-});
+  if (typeof props.data.badge === 'string')
+    return { text: props.data.badge, type: 'info' }
 
+  return props.data.badge
+})
 </script>
 
 <template>
@@ -25,7 +24,7 @@ const badgeComputed = computed(() => {
             :src="withBase(data.icon)"
             :alt="data.title"
             onerror="this.parentElement.style.display='none'"
-          />
+          >
         </div>
         <h5 class="title">
           {{ data.title }}

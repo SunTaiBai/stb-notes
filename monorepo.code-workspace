@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "name": "@stb/eslint-config",
+      "path": "internal/eslint-config"
+    },
+    {
+      "name": "@stb/stylelint-config",
+      "path": "internal/stylelint-config"
+    },
+    {
+      "name": "@stb/vite-config",
+      "path": "internal/vite-config"
+    },
+  ]
+}

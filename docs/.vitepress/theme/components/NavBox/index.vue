@@ -1,24 +1,26 @@
 <script setup lang="ts">
-import { computed } from "vue";
-import type { NavItem } from "../../types";
-import { slugify } from "@mdit-vue/shared";
-import Link from "./link.vue";
+import { computed } from 'vue'
+import { slugify } from '@mdit-vue/shared'
+import type { NavItem } from '../../types'
+import Link from './link.vue'
+
 const props = defineProps<{
-  title: string;
-  items: NavItem[];
-}>();
-const anchorPoint = computed(() => slugify(props.title));
+  title: string
+  items: NavItem[]
+}>()
+const anchorPoint = computed(() => slugify(props.title))
 </script>
 
 <template>
   <h2 :id="anchorPoint" tabindex="-1">
     {{ title }}
-    <a class="header-anchor" :href="`#${anchorPoint}`" aria-hidden="true"></a>
+    <a class="header-anchor" :href="`#${anchorPoint}`" aria-hidden="true" />
   </h2>
-  <div class="nav-links-box">
+  <div class="nav-links-box  w-full">
     <Link v-for="(item, index) in items" :key="index" :data="item" />
   </div>
 </template>
+
 <style lang="scss" scoped>
 .nav-links-box {
   display: grid;
@@ -37,5 +39,4 @@ const anchorPoint = computed(() => slugify(props.title));
     }
   }
 }
-
 </style>

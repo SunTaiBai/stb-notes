@@ -1,0 +1,28 @@
+{
+  "name": "@stb/eslint-config",
+  "version": "1.0.0",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "pnpm rimraf .turbo node_modules dist",
+    "lint": "pnpm eslint .",
+    "stub": "pnpm unbuild --stub"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.38.6",
+    "eslint-define-config": "^1.20.0",
+    "eslint": "^8.40.0"
+  }
+}

@@ -3,11 +3,11 @@ export interface NavItem {
   icon: string
   /** 徽章 */
   badge?:
-    | string
-    | {
-        text?: string
-        type?: 'info' | 'tip' | 'warning' | 'danger'
-      }
+  | string
+  | {
+    text?: string
+    type?: 'info' | 'tip' | 'warning' | 'danger'
+  }
   /** 站点名称 */
   title: string
   /** 站点简介 */
