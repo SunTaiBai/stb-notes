@@ -18,7 +18,9 @@ export default defineConfig(() => {
         },
       ],
     },
-    plugins: [MarkdownTransform(), UnoCSS(), // plugins
+    plugins: [
+      MarkdownTransform(),
+      UnoCSS(), // plugins
       Components({
         dirs: resolve(__dirname, '.vitepress/theme/components'),
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
@@ -27,12 +29,14 @@ export default defineConfig(() => {
             componentPrefix: '',
           }),
         ],
-        dts: './.vitepress/components.d.ts',
+        dts: '../types/components.d.ts',
         transformer: 'vue3',
-      }), Icons({
+      }),
+      Icons({
         compiler: 'vue3',
         autoInstall: true,
         defaultStyle: 'display: inline-block',
-      })],
+      }),
+    ],
   }
 })

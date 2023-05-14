@@ -21,6 +21,7 @@
     "docs/.vitepress/theme/*.ts",
     "docs/.vitepress/theme/components/*.vue",
     "docs/.vitepress/*.ts",
+    "docs/.vitepress/components.d.ts",
     "docs/vite.config.ts",
     "types/**/*.d.ts",
     "types/**/*.ts",

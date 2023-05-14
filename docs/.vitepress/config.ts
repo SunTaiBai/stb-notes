@@ -1,7 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { algolia, head, nav, sidebar } from './configs'
 
-const isProd = process.env.NODE_ENV === 'production'
 export default defineConfig({
   outDir: '../dist',
   base: '/',
@@ -28,7 +27,7 @@ export default defineConfig({
     socialLinks: [{ icon: 'github', link: 'https://github.com/SunTaiBai' }],
     footer: {
       message: '如有转载或 CV 的请标注本站原文地址',
-      copyright: 'Copyright © 2023-SunTaiBai',
+      copyright: `<a target="_blank" href="https://github.com/SunTaiBai/blob/main/LICENSE">MIT License</a> | 版权所有 © 2022-${new Date().getFullYear()} <a target="_blank" href="https://github.com/SunTaiBai">SunTaiBai</a>`,
     },
     darkModeSwitchLabel: '外观',
     returnToTopLabel: '返回顶部',
