@@ -13,13 +13,13 @@ npm run dev
 ```
 
 ### 正常启动后的界面↓
-![node demo](./images/index2/1.png)
+![node demo](../images/index2/1.png)
 
 此demo是让用户在输入框输入动物名，比如dog，它会动态显示出指定动物的提示部分。
 
 但是这里按下Generate names后会出现 An error occurred during your request.
 
-![node demo](./images/index2/2.png)
+![node demo](../images/index2/2.png)
 
 因为node服务是不走代理的，所以你懂的，需要简单配置一下↓
 ::: tip 我的是win11
@@ -29,7 +29,7 @@ npm run dev
     3 查看自己的代理端口（至于怎么查，大部分的软件都会显示的）
     4 代理ip输入127.0.0.1，端口写你查到的
 :::
-![代理](./images/index2/3.png)
+![代理](../images/index2/3.png)
 
 然后再次访问还是有问题，报400 The plain HTTP request was sent to HTTPS port，说明需要https访问，这里需要在下一个包 [tunnel](https://github.com/koichik/node-tunnel/#node-tunnel---httphttps-agents-for-tunneling-proxies)
 
@@ -110,6 +110,6 @@ Names:`
 ```
 
 再次访问↓
-![再次访问结果](./images/index2/4.png)
+![再次访问结果](../images/index2/4.png)
 
 搞定😊，愉快的学习chatgpt吧

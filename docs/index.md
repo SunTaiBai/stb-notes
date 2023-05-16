@@ -10,8 +10,8 @@ hero:
     src: /logo.svg
     alt: 猩猩点灯
   actions:
-    - text: 开始
-      link: /pages/blog/
+    - text: AI学习
+      link: /pages/ai/chatgpt/study1/
     - text: 快捷导航
       link: /pages/nav/
       theme: alt
