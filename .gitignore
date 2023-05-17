@@ -3,4 +3,3 @@ docs/.vitepress/cache
 docs/.vitepress/dist
 .vscode
 dist
-docs/.vitepress/theme/components/git-talk.vue
