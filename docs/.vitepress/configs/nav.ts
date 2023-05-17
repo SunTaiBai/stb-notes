@@ -6,7 +6,7 @@ export const nav: DefaultTheme.Config['nav'] = [
     text: 'AI学习',
     items: [
       {
-        text: 'ChatGpt', link: '/pages/ai/chatgpt/study1',
+        text: 'ChatGpt', link: '/pages/ai/chatgpt/study1/',
       },
     ],
     activeMatch: '/pages/ai/',

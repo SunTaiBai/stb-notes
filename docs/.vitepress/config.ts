@@ -1,6 +1,11 @@
+import { createWriteStream } from 'node:fs'
+import { resolve } from 'node:path'
+import type { PageData } from 'vitepress'
 import { defineConfig } from 'vitepress'
+import { SitemapStream } from 'sitemap'
 import { algolia, head, nav, sidebar } from './configs'
 
+const links: { url: string; lastmod: PageData['lastUpdated'] }[] = []
 export default defineConfig({
   outDir: '../dist',
   base: '/',
@@ -36,5 +41,22 @@ export default defineConfig({
       prev: '上一篇',
       next: '下一篇',
     },
+  },
+  /* 生成站点地图 */
+  transformHtml: (_, id, { pageData }) => {
+    if (!/[\\/]404\.html$/.test(id)) {
+      links.push({
+        url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
+        lastmod: pageData.lastUpdated,
+      })
+    }
+  },
+  buildEnd: async ({ outDir }) => {
+    const sitemap = new SitemapStream({ hostname: 'https://notes.sunguojia.com/' })
+    const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
+    sitemap.pipe(writeStream)
+    links.forEach(link => sitemap.write(link))
+    sitemap.end()
+    await new Promise(resolve => writeStream.on('finish', resolve))
   },
 })

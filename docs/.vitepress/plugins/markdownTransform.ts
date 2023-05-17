@@ -53,7 +53,9 @@ export async function getDocsMarkdown() {
   const CopyRightSection = `
   <CopyRight/>`
 
-  const footer = `${ContributorsSection}\n${CopyRightSection}\n`
+  const GitTalk = '<GitTalk/>'
+
+  const footer = `${ContributorsSection}\n${CopyRightSection}\n${GitTalk}\n`
 
   return {
     footer,
