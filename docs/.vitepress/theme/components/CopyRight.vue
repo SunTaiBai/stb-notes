@@ -51,7 +51,7 @@ function getGithubLink(name: string) {
             target="_blank"
           >CC BY-NC-SA 4.0</a>
           许可协议。转载请注明来自
-          <a href="https://sunguojia.com/" rel="noreferrer" target="_blank">SunTaiBai</a></span>！
+          <a href="https://notes.sunguojia.com/" rel="noreferrer" target="_blank">SunTaiBai</a></span>！
       </div>
     </section>
   </div>

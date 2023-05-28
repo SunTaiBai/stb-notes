@@ -1,8 +1,9 @@
 import DefaultTheme from 'vitepress/theme'
-import { useData } from 'vitepress'
+import mediumZoom from 'medium-zoom'
+import { useData, useRoute } from 'vitepress'
 import './style/index.scss'
 import 'uno.css'
-import { h } from 'vue'
+import { h, nextTick, onMounted, watch } from 'vue'
 import 'dayjs/locale/zh-cn'
 
 export default {
@@ -16,5 +17,18 @@ export default {
       props.class = frontmatter.value.layoutClass
 
     return h(DefaultTheme.Layout, props)
+  },
+  setup() {
+    const route = useRoute()
+    const initZoom = () => {
+      mediumZoom('.main img', { background: 'rgb(0 0 0 / 38%)' })
+    }
+    onMounted(() => {
+      initZoom()
+    })
+    watch(
+      () => route.path,
+      () => nextTick(() => initZoom()),
+    )
   },
 }

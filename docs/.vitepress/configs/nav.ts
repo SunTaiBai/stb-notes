@@ -11,5 +11,5 @@ export const nav: DefaultTheme.Config['nav'] = [
     ],
     activeMatch: '/pages/ai/',
   },
-  { text: '博客', link: '/pages/blog/', activeMatch: '/pages/blog/' },
+  { text: '博客', link: '/pages/blog/2023-05-28/', activeMatch: '/pages/blog/' },
 ]

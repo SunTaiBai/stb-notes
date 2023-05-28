@@ -11,4 +11,13 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ],
     },
   ],
+  '/pages/blog/': [
+    {
+      text: '2023年',
+      collapsed: false,
+      items: [
+        { text: '2023-05-28', link: '/pages/blog/2023-05-28/' },
+      ],
+    },
+  ],
 }
